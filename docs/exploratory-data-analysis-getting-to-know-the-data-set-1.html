@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3 Exploratory Data Analysis: Getting to Know the Data Set |  Project Guide to your Covid-19 Data Science Project</title>
+  <meta name="description" content="All things you need to know for your successful TechAcademy Data Science Project" />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3 Exploratory Data Analysis: Getting to Know the Data Set |  Project Guide to your Covid-19 Data Science Project" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="All things you need to know for your successful TechAcademy Data Science Project" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 Exploratory Data Analysis: Getting to Know the Data Set |  Project Guide to your Covid-19 Data Science Project" />
+  
+  <meta name="twitter:description" content="All things you need to know for your successful TechAcademy Data Science Project" />
+  
+
+<meta name="author" content="TechAcademy e.V." />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="introduction-to-your-project.html"/>
+
+<script src="libs/header-attrs-2.1/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Covid-19 Data Science Project</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome!</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#group-work"><i class="fa fa-check"></i><b>1.1</b> Group Work</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#whats-r"><i class="fa fa-check"></i><b>1.2</b> What’s R?</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#rstudio-cloud"><i class="fa fa-check"></i><b>1.2.1</b> RStudio Cloud</a></li>
+<li class="chapter" data-level="1.2.2" data-path="index.html"><a href="index.html#curriculum"><i class="fa fa-check"></i><b>1.2.2</b> Curriculum</a></li>
+<li class="chapter" data-level="1.2.3" data-path="index.html"><a href="index.html#links"><i class="fa fa-check"></i><b>1.2.3</b> Links</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#whats-python"><i class="fa fa-check"></i><b>1.3</b> What’s Python?</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#anaconda-and-jupyter"><i class="fa fa-check"></i><b>1.3.1</b> Anaconda and Jupyter</a></li>
+<li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#curriculum-1"><i class="fa fa-check"></i><b>1.3.2</b> Curriculum</a></li>
+<li class="chapter" data-level="1.3.3" data-path="index.html"><a href="index.html#links-1"><i class="fa fa-check"></i><b>1.3.3</b> Links</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#your-data-science-project"><i class="fa fa-check"></i><b>1.4</b> Your Data Science Project</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="introduction-to-your-project.html"><a href="introduction-to-your-project.html"><i class="fa fa-check"></i><b>2</b> Introduction to Your Project</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="introduction-to-your-project.html"><a href="introduction-to-your-project.html#purpose-of-the-project-guide"><i class="fa fa-check"></i><b>2.1</b> Purpose of the Project Guide</a></li>
+<li class="chapter" data-level="2.2" data-path="introduction-to-your-project.html"><a href="introduction-to-your-project.html#what-is-this-project-about"><i class="fa fa-check"></i><b>2.2</b> What is this Project About?</a></li>
+<li class="chapter" data-level="2.3" data-path="introduction-to-your-project.html"><a href="introduction-to-your-project.html#exploratory-data-analysis-getting-to-know-the-data-set"><i class="fa fa-check"></i><b>2.3</b> Exploratory Data Analysis – getting to know the data set</a></li>
+<li class="chapter" data-level="2.4" data-path="introduction-to-your-project.html"><a href="introduction-to-your-project.html#prediction-apply-statistical-methods-to-make-accurate-predictions"><i class="fa fa-check"></i><b>2.4</b> Prediction – Apply Statistical Methods to Make Accurate Predictions</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="exploratory-data-analysis-getting-to-know-the-data-set-1.html"><a href="exploratory-data-analysis-getting-to-know-the-data-set-1.html"><i class="fa fa-check"></i><b>3</b> Exploratory Data Analysis: Getting to Know the Data Set</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="exploratory-data-analysis-getting-to-know-the-data-set-1.html"><a href="exploratory-data-analysis-getting-to-know-the-data-set-1.html#importing-cleaning-and-transforming-the-data-and-creating-your-first-plot"><i class="fa fa-check"></i><b>3.1</b> Importing, Cleaning and Transforming the Data and Creating Your First Plot</a></li>
+<li class="chapter" data-level="3.2" data-path="exploratory-data-analysis-getting-to-know-the-data-set-1.html"><a href="exploratory-data-analysis-getting-to-know-the-data-set-1.html#visualize-stock-data"><i class="fa fa-check"></i><b>3.2</b> Visualize stock data</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://tech-academy.io/" target="blank">&copy 2020 TechAcademy e.V.</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"><p><img src="plots/TA_Logo.png" style="width:2in" /><br />
+Project Guide to your Covid-19 Data Science Project</p></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="exploratory-data-analysis-getting-to-know-the-data-set-1" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Exploratory Data Analysis: Getting to Know the Data Set</h1>
+<p>Before you can dive into the data, set up your programming environment. This will be the place where the magic happens – all your coding will take place there.</p>
+<div class="tips r">
+<p>In your workspace on <a href="https://rstudio.cloud/projects">rstudio.cloud</a> we have already uploaded an “assignment” for you (Template Coronavirus). When you create a new project within the workspace “Class of ’20 | TechAcademy | Data Science with R”, your own workspace will open up. We’ve already made some arrangements for you: The data sets that you will be working with throughout the project are already available in your working directory. We also created an RMarkdown file, with which you will be able to create a detailed report of your project. You can convert this file into a PDF document when you have completed the documentation. Open the file “Markdown_Corona.Rmd” and see for yourself!</p>
+</div>
+<div class="tips python">
+<p>On <a href="http://tech-academy.io/jupyter">JupyterHub</a> you will find the folder “coronavirus”. There, you will find a folder with your name – please create and store your Jupyter notebooks inside there.
+All the necessary data is stored in the folder “data” which is also located in the “coronavirus” folder.</p>
+</div>
+<div id="importing-cleaning-and-transforming-the-data-and-creating-your-first-plot" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Importing, Cleaning and Transforming the Data and Creating Your First Plot</h2>
+<p>In this section you will get to apply the basics of working with data: You will import, clean and transform the data so that you will then be able to visualize it in the next step.</p>
+<p>Visualization is one of the most helpful methods to get a feeling for the relation of the various variables of the data set. As already mentioned, this process is called Exploratory Data Analysis (EDA).</p>
+<p>Did you know that Google provides quite extensive public access to the relative number of search queries over time? You can simply type in a keyword and Google returns the public’s relative interest in that topic over time. First have a look at the <a href="https://trends.google.de/trends">Google Trends</a> website for yourself. An interesting way to ease into the whole topic of the coronavirus outbreak is to look at a plot of the Google Trends development with respect to the virus. To visualize the number of people searching for “coronavirus” online, first import the Google Trends data set into your workspace and name it accordingly. We have already downloaded the data for you. It is always helpful to give meaningful names to your data sets and variables so that you don’t get confused later on when you have several different data sets and variables in your workspace.</p>
+<p>Now it is time to get a quick overview of the data set. What is the structure of the data set, which variables does it contain, what is the type of the variables? What is noticeable?</p>
+<p>Before we can get started with the actual visualization, we have to tweak the data set a little so that the different commands will work later on. Sometimes this sounds easier than it is done, but very often the format of the data is not compatible and you have to figure out why and how to manipulate the data accordingly.</p>
+<p>To create a time series plot in the next step, it is necessary for the date variable to have the right format. Do you already know how to do that from your DataCamp courses?</p>
+<p>After having changed the data to a coherent and meaningful format, it is now time to create our first line plot. Before you actually plot the data, it is helpful to envision what it could look like. Which variable has to be on the x- and y-axis, respectively?</p>
+<p>This is what a visualization could look like, but don’t worry, your result does not have to look exactly like this as long as the structure of the plot is similar.</p>
+<p><img src="output_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>Looking at the line plot, you can see a clear pattern with respect to different dates. Do you know what happened on the dates the spikes in searches occurred? If you have time you can play with the visualization and refine it, add labels and change colors, but that is not too important, so you can first have a look at the following steps and come back to this when you have completed the rest.</p>
+</div>
+<div id="visualize-stock-data" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Visualize stock data</h2>
+<p>The coronavirus had an impact on many areas of our lives and our economy, the stock market being one of them. When visualizing the stock data, the impact becomes evident. Many firms suffered from the outbreak, others profited. Let’s have a look!</p>
+<p>As before, you first need to import the stock market dataset and name it accordingly. Once more, it makes sense to get an overview of the data to see what you are working with. Can you already see which variables need to be transformed?</p>
+<p>Before visualizing the stock data, try to change the names of the stock symbols, so that people who are not familiar with them know which firm’s stocks are being analyzed.</p>
+<p>This time, we will not create a single line plot but several next to each other, which allows for a better comparison of the stock price development of different firms. The following plots are supposed to give you an orientation of what your result could look like:</p>
+<p>You can often see vertical lines in the plots to highlight when an event happened that had a severe impact on a variable. Try to add that to the plots. Here is an idea of what it could look like:</p>
+<p><img src="output_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introduction-to-your-project.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["output.pdf", "output.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

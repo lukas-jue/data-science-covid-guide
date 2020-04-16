@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 Covid-19 Prediction | Data Science Project Guide: Covid-19</title>
+  <meta name="description" content="Everything you need to know for your successful TechAcademy Data Science Project" />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 Covid-19 Prediction | Data Science Project Guide: Covid-19" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Everything you need to know for your successful TechAcademy Data Science Project" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 Covid-19 Prediction | Data Science Project Guide: Covid-19" />
+  
+  <meta name="twitter:description" content="Everything you need to know for your successful TechAcademy Data Science Project" />
+  
+
+<meta name="author" content="TechAcademy e.V." />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="exploratory-data-analysis.html"/>
+<link rel="next" href="excercise-checklist.html"/>
+<script src="libs/header-attrs-2.1/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Covid-19 Data Science Project</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome!</a></li>
+<li class="chapter" data-level="2" data-path="whats-data-science-and-how-do-i-do-it.html"><a href="whats-data-science-and-how-do-i-do-it.html"><i class="fa fa-check"></i><b>2</b> What’s Data Science and How Do I Do It?</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="whats-data-science-and-how-do-i-do-it.html"><a href="whats-data-science-and-how-do-i-do-it.html#whats-r"><i class="fa fa-check"></i><b>2.1</b> What’s R?</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="whats-data-science-and-how-do-i-do-it.html"><a href="whats-data-science-and-how-do-i-do-it.html#rstudio-cloud"><i class="fa fa-check"></i><b>2.1.1</b> RStudio Cloud</a></li>
+<li class="chapter" data-level="2.1.2" data-path="whats-data-science-and-how-do-i-do-it.html"><a href="whats-data-science-and-how-do-i-do-it.html#curriculum"><i class="fa fa-check"></i><b>2.1.2</b> Curriculum</a></li>
+<li class="chapter" data-level="2.1.3" data-path="whats-data-science-and-how-do-i-do-it.html"><a href="whats-data-science-and-how-do-i-do-it.html#links"><i class="fa fa-check"></i><b>2.1.3</b> Links</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="whats-data-science-and-how-do-i-do-it.html"><a href="whats-data-science-and-how-do-i-do-it.html#whats-python"><i class="fa fa-check"></i><b>2.2</b> What’s Python?</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="whats-data-science-and-how-do-i-do-it.html"><a href="whats-data-science-and-how-do-i-do-it.html#anaconda-and-jupyter"><i class="fa fa-check"></i><b>2.2.1</b> Anaconda and Jupyter</a></li>
+<li class="chapter" data-level="2.2.2" data-path="whats-data-science-and-how-do-i-do-it.html"><a href="whats-data-science-and-how-do-i-do-it.html#curriculum-1"><i class="fa fa-check"></i><b>2.2.2</b> Curriculum</a></li>
+<li class="chapter" data-level="2.2.3" data-path="whats-data-science-and-how-do-i-do-it.html"><a href="whats-data-science-and-how-do-i-do-it.html#links-1"><i class="fa fa-check"></i><b>2.2.3</b> Links</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="whats-data-science-and-how-do-i-do-it.html"><a href="whats-data-science-and-how-do-i-do-it.html#your-data-science-project"><i class="fa fa-check"></i><b>2.3</b> Your Data Science Project</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="introduction-to-your-project.html"><a href="introduction-to-your-project.html"><i class="fa fa-check"></i><b>3</b> Introduction to Your Project</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="introduction-to-your-project.html"><a href="introduction-to-your-project.html#purpose-of-the-project-guide"><i class="fa fa-check"></i><b>3.1</b> Purpose of the Project Guide</a></li>
+<li class="chapter" data-level="3.2" data-path="introduction-to-your-project.html"><a href="introduction-to-your-project.html#what-is-this-project-about"><i class="fa fa-check"></i><b>3.2</b> What is this Project About?</a></li>
+<li class="chapter" data-level="3.3" data-path="introduction-to-your-project.html"><a href="introduction-to-your-project.html#exploratory-data-analysis-getting-to-know-the-data-set"><i class="fa fa-check"></i><b>3.3</b> Exploratory Data Analysis – getting to know the data set</a></li>
+<li class="chapter" data-level="3.4" data-path="introduction-to-your-project.html"><a href="introduction-to-your-project.html#prediction-apply-statistical-methods"><i class="fa fa-check"></i><b>3.4</b> Prediction – Apply Statistical Methods</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html"><i class="fa fa-check"></i><b>4</b> Exploratory Data Analysis</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#import-clean-and-transform-the-data-for-your-first-plot"><i class="fa fa-check"></i><b>4.1</b> Import, Clean and Transform the Data for Your First Plot</a></li>
+<li class="chapter" data-level="4.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualize-stock-data"><i class="fa fa-check"></i><b>4.2</b> Visualize Stock Data</a></li>
+<li class="chapter" data-level="4.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualize-covid-19-infection-data"><i class="fa fa-check"></i><b>4.3</b> Visualize Covid-19 Infection Data</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#worldwide-development-of-confirmed-cases"><i class="fa fa-check"></i><b>4.3.1</b> Worldwide Development of Confirmed Cases</a></li>
+<li class="chapter" data-level="4.3.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#stacked-area-plot-by-country"><i class="fa fa-check"></i><b>4.3.2</b> Stacked Area Plot by Country</a></li>
+<li class="chapter" data-level="4.3.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#all-curves-in-one-plot"><i class="fa fa-check"></i><b>4.3.3</b> All Curves in One Plot</a></li>
+<li class="chapter" data-level="4.3.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#barplot-by-country"><i class="fa fa-check"></i><b>4.3.4</b> Barplot by Country</a></li>
+<li class="chapter" data-level="4.3.5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#mortality-rate"><i class="fa fa-check"></i><b>4.3.5</b> Mortality Rate</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualization-with-maps"><i class="fa fa-check"></i><b>4.4</b> Visualization with Maps</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#color-countries-by-confirmed-cases"><i class="fa fa-check"></i><b>4.4.1</b> Color Countries by Confirmed Cases</a></li>
+<li class="chapter" data-level="4.4.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#enhance-your-map"><i class="fa fa-check"></i><b>4.4.2</b> Enhance Your Map</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="covid-19-prediction.html"><a href="covid-19-prediction.html"><i class="fa fa-check"></i><b>5</b> Covid-19 Prediction</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="covid-19-prediction.html"><a href="covid-19-prediction.html#feature-engineering-and-correlation-analysis"><i class="fa fa-check"></i><b>5.1</b> Feature Engineering and Correlation Analysis</a></li>
+<li class="chapter" data-level="5.2" data-path="covid-19-prediction.html"><a href="covid-19-prediction.html#build-a-simple-model-prototype"><i class="fa fa-check"></i><b>5.2</b> Build a Simple Model Prototype</a></li>
+<li class="chapter" data-level="5.3" data-path="covid-19-prediction.html"><a href="covid-19-prediction.html#refine-your-simple-regression-model"><i class="fa fa-check"></i><b>5.3</b> Refine Your Simple Regression Model</a></li>
+<li class="chapter" data-level="5.4" data-path="covid-19-prediction.html"><a href="covid-19-prediction.html#extend-your-model-to-several-countries"><i class="fa fa-check"></i><b>5.4</b> Extend Your Model to Several Countries</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="excercise-checklist.html"><a href="excercise-checklist.html"><i class="fa fa-check"></i><b>6</b> Excercise Checklist</a></li>
+<li class="divider"></li>
+<li><a href="https://tech-academy.io/" target="blank">&copy 2020 TechAcademy e.V.</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Science Project Guide: Covid-19</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="covid-19-prediction" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Covid-19 Prediction</h1>
+<p>Until now you have looked deeply into the given data and visualized different aspects of it. But wouldn’t it be nice to predict the number of new infections with other variables contained in the data set? In this part, we’ll do just that and go a step further by developing simple (or more advanced) statistical models which will be able to predict the amount of new infections on a given day.</p>
+<p>These predictions will be based on features which contain information about this specific day. The goal of our analysis will be to identify dependencies (correlations) between these features and the number of new infections. Your model can then exploit those correlations to make predictions.</p>
+<p>You already looked at the number of Google search queries for “corona”-related keywords in the first part. Do you think that those might have something in common with the daily new infections? Also, you’ve analyzed stock market data for the relevant period. Is the stock market moving according to new infections? You might think that those two variables have some predictive power. When a person is showing symptoms and fears that they might have contracted the disease, they will google it and try to get more information. Also, the more new infections are announced, the worse for the economy and hence – as a proxy for general economic expectations – the stock market. In this part, we’ll check those claims and see how well models based on those and other variables perform.</p>
+<p>The procedure to get to a statistical model ready for prediction is divided into two parts. First, you train your model on some data which is called the <strong>train</strong> data set. Afterwards, you test your model on data which the model has never come into contact with during training. This is called the <strong>test</strong> data set.
+This procedure gives us a good estimation of how well your model would perform in real life with completely new data.
+If you train your model in a way that it only remembers the data from the training data set, it would perform very well on this set. However, it would not be able to generalize the structure of the data and transfer it to new unseen data – this problem is called <em>overfitting</em>. We can detect it by evaluating the predictions of our model on a test data set. On the other hand, you could also <em>underfit</em> your model. This means it doesn’t learn the relationships between the dependent and independent variable(s) well enough to perform reasonably well on the unseen test data set. Hence, your top priority must be to find the optimal balance between those two problems and fit your model well to both training and test data.</p>
+<p>But how can you check if your model under- or overfitted or whether it is just fine? As already explained above, after the training process we evaluate our model by seeing how well it performs when being used on the test data set. We do this by letting our model use the previously unseen test observations to make predictions for the dependent variable. In our case, we would use the Google trends variable of the test data set to predict the number of new infections. We then compare our predictions with the actual number of cases that is contained in the test data set and see how close we came.</p>
+<p>For this performance evaluation it is useful to define a metric which compares the prediction of your model with the true values. One such measure is the <em>mean absolute percentage error (MAPE)</em> which computes the mean percentage deviation of the prediction from the true values.</p>
+<p><span class="math display">\[ MAPE = \frac{1}{n} \sum_{t=1}^n \left\lvert\frac{(y_t - \hat{y}_t)}{y_t}\right\rvert \]</span></p>
+<p>The larger the MAPE is, the worse your model performs. You can interpret that metric as the average percentage deviation of your model’s prediction to the true values. <span class="math inline">\(MAPE = 0.5\)</span> for example means that on average, your prediction is 50% off the true values. If you look closer at other prediction tasks for continuous variables, you’ll also come across some other metrics such as the <em>root mean squared error (RMSE)</em> or <em>mean absolute error (MAE)</em>. Think about why those are not well suited for this kind of prediction evaluation.</p>
+<p>So let’s get started with the prediction. Once again, we have to lay some groundwork before we can let our models do the magic. You’ll start with some feature engineering and correlation analysis. After that, you can set up your first very simple univariate linear regression model (i.e. one dependent and one independent variable) for a limited set of observations – in this case German data only. When we’ve got that running, we’ll continuously improve our model by adding or modifying features. We then take our best model and check out how well it performs on the entire data set. You’ll then see how well the German model runs on four other countries.</p>
+<div id="feature-engineering-and-correlation-analysis" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Feature Engineering and Correlation Analysis</h2>
+<p>Before we start, you’ll need to load a new data set. We’ve already prepared a panel data set with five countries and many important characteristics. Import <code>predict.csv</code>, on which this entire part will be based. Many variables are similar to the data set before, but there are also some important differences.
+The goal of our model is to predict the number of new infections per day. This value corresponds to the difference between the cumulative number of infections of the current day and the day before in each country. Assign the computed values to a new variable <code>new_confirmed</code> – this will be the column your model is trying to predict.
+In a later model, we also want to include <code>lags</code> for the Google Search trend data. This means that each row of our data frame should not only contain the search trend for the current day but also from the day before (lag=1), two days before (lag=2) and so on. Compute the lags from 1 to 10 for each row and assign it to new columns in your data frame. We will explain later why we need this and what the idea behind this feature is, but it is easier to compute it right away.</p>
+<p>The next step is to analyse the dependency between the different columns or features in your train data set. Select several columns of the data frame, compute the correlations between them and visualize them in a scatterplot. It is important to include the column <code>new_confirmed</code> here because we are especially interested in the dependency between the other features and this column.</p>
+<p>Your output could look similar to this one:</p>
+<p><img src="output_files/figure-html/unnamed-chunk-33-1.png" width="1152" /></p>
+<div class="tips r">
+<p>Compute the daily number of new infections for each observation in the data set. You can select previous day’s values with the <code>dplyr</code> function <code>lag()</code>. Take care of accurately computing the lags over several countries in our data set by grouping your data frame appropriately.</p>
+<p>You can either compute ten different lags by just copying and pasting your code. Or you can write a function that takes care of this process automatically. The first option is very error prone and not flexible at all. What if you want to do 15 instead of ten lags? So google how you can automatically create several different lag-variables at once.</p>
+<p>Use the function <code>cor()</code> to analyze the correlation between your variables in a correlation matrix. Which features display the highest correlation?</p>
+<p>Use the library <code>GGally</code> to generate a nice table that contains both scatterplots and correlations – but restrict yourself to promising variables. This plot is rather complex and takes increasingly more time to compute and becomes less readable the more variables you include. Maybe stick to the most promising 5 to 7 variables.</p>
+</div>
+<div class="tips python">
+<p>You have to compute the <code>new_confirmed</code> column first, which can easily be done with the pandas function <code>df[‘column_name´].diff()</code>, which computes the difference between the current value of the column and the value of the row before. But keep in mind that you first have to group your data by the different countries in the data frame.
+Quite similarly you can compute the lags using the pandas function <code>df[‘colum_name’].shift(1)</code>.</p>
+<p>To compute the correlation matrix you can use a function from the seaborn library, which builds on top of matplotlib and is often a useful extension.
+Import seaborn using <code>import seaborn as sns</code> and use than the seaborn function <code>sns.heatmap(df.corr())</code>. This function takes as input a pandas data frame on which the pandas function <code>corr()</code> is applied – which computes the correlations between the different columns. If you compute the correlation heatmap for all columns in the data frame, it can be a bit confusing, therefore select just a subset of all columns.
+You can then visualize the correlations in a scatter plot using the seaborn function <code>sns.pairplot(df)</code>, which again takes a data frame as input.</p>
+</div>
+</div>
+<div id="build-a-simple-model-prototype" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Build a Simple Model Prototype</h2>
+<p>If you have a look at the correlation matrix from the last exercise, you notice a correlation between <code>new_confirmed</code> and <code>gs_corona</code> of around 0.2. We want to use this data now in our model and evaluate how good this prediction is.
+The idea is, that if a lot of people search on the internet for symptoms and the keyword <code>corona</code>, a lot of new infections are to be expected. Conversely, if few people search for the disease, we might expect less new infections. We start with a linear regression which is a simple yet powerful tool. The model will look like this:</p>
+<p><span class="math display">\[ new\_confirmed_t = \beta_0 + \beta_1 gs\_corona_t +\epsilon_t \]</span></p>
+<p><span class="math inline">\(new\_confirmed\)</span> is your dependent variable that you want to explain by the independent variable(s), in this case <span class="math inline">\(gs\_corona\)</span> only. To optimally fit a linear line to the data, the ordinary least squares method estimates an intercept <span class="math inline">\(\beta_0\)</span> and the coefficient(s) <span class="math inline">\(\beta_k\)</span> for every single independent variable. In our univariate case, this is only <span class="math inline">\(\beta_1\)</span>.</p>
+<p>Before we can start with modelling, we have to define our train and test data sets.
+We will begin with a prediction for Germany, so filter the data set in a way that it only contains the data from Germany.
+Afterwards, divide your data set into a train and test data set based on the time periods shown in Table .</p>
+<table class="table table-striped table-hover table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:reg-table">Table 5.1: </span>Train/Test Split
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+DataSet
+</th>
+<th style="text-align:left;">
+From
+</th>
+<th style="text-align:left;">
+To
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Train
+</td>
+<td style="text-align:left;">
+01 March 2020
+</td>
+<td style="text-align:left;">
+25 March 2020
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Test
+</td>
+<td style="text-align:left;">
+26 March 2020
+</td>
+<td style="text-align:left;">
+09 April 2020
+</td>
+</tr>
+</tbody>
+</table>
+<p>Now we are well prepared to start modelling.
+Define a linear regression model of the form shown above and train it on your train
+data set with <code>new_confirmed</code> as the value we want to predict and <code>gs_corona</code> as
+the only feature of the model. After our model is trained, we want to try a prediction
+with this model.</p>
+<p>Now your model has learned the relationship between the number of new infections and google searches in the training period. You can now take this model to the test time period and check how well it performs on previously unseen data.</p>
+<p>Use your test data set to feed it into your model and predict the number of new
+infections for the test period. At the moment we don’t know how well our model
+performs. Let’s compute the MAPE as described above for our test data set. Compute the MAPE for your model using the predictions of the test set and
+the corresponding actual values of <code>new_confirmed</code>.</p>
+<p>Furthermore, we want to visualize the true values for the train and test data
+set, as well as the predictions from our model data set for both time periods in one
+plot. This is how the plot should look like:</p>
+<p><img src="output_files/figure-html/unnamed-chunk-36-1.png" width="576" style="display: block; margin: auto;" /></p>
+<p>Your first simple linear regression model result might look something like this. Think about what the coefficient and the model fit metrics mean. How good do you think is this model based on the result?</p>
+<p><img src="plots/reg_table.png" width="50%" style="display: block; margin: auto;" /></p>
+<div class="tips r">
+<p>Generate two separate data sets: <code>train</code> and <code>test</code>. Split the original data by time as defined above and select only observations in Germany.</p>
+<p>Then use the <code>base</code> function <code>lm()</code> to train the model on your <code>train</code> data set. Save and inspect that model with summary().</p>
+<p>Use <code>predict()</code> to apply the model to your test data set. This function returns the predictions (<span class="math inline">\(\hat{y}_t\)</span> as a vector.</p>
+<p>It might make sense to name the relevant y-vectors in a structured way. You could think about such a structure:</p>
+<p><code>y_train_vec</code>, <code>yhat_train_vec</code>, <code>y_test_vec</code>, and <code>yhat_test_vec</code>, where <code>y</code> refers to the actual values and <code>yhat</code> denotes the predicted values.</p>
+<p>You can easily generate regression tables in nice LaTeX, HTML or text format with the package <code>stargazer</code>. Use it to compare different models among each other in your RMarkdown document.</p>
+</div>
+<div class="tips python">
+<p>Filter the data correspondingly and you should have for different pandas series:
+X_train = values of <code>gs_corona</code> in the train period
+X_test = values of <code>gs_corona</code> in the test period
+y_train = values of <code>new_confirmed</code> in train period
+y_test = values of <code>new_confirmed</code> in test period</p>
+<p>You have to import <code>LinearRegression()</code> from <code>sklear.linear_model</code> and can then train your model using
+model = LinearRegression()
+model.fit(X_train.reshape(-1,1), y_train)</p>
+<p>You need to reshape the X values because you only use one feature in this case. If you use more then one feature you don’t have to reshape your data.
+After training, you can use the <code>predict()</code> method on your model an pass the X_test values to the model.</p>
+</div>
+</div>
+<div id="refine-your-simple-regression-model" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Refine Your Simple Regression Model</h2>
+<p>If you look at the predictions of your model for the train and test period, you see that it doesn’t work well, especially on the test period. A possibility could be that there is a lag between the time people google for symptoms to when they are diagnosed with Covid-19. You probably start googling once you show symptoms which is likely a few days before you visit a doctor. After the visit, it will additionally take a few days before your test results will arrive. Therefore we want to include a lag in our model. Luckily we’ve already computed the lagged values.</p>
+<p>Train a new linear regression model, but in this case, don’t use the <code>gs_corona</code> column as a feature, but the column with a lag of ten days. Your model will then have this form:</p>
+<p><span class="math display">\[ new\_confirmed_t = \beta_0 + \beta_1 gs\_corona_{t-10} +\epsilon_t \]</span></p>
+<p>Look at the subscript for <span class="math inline">\(gs\_corona\)</span>. That’s the only difference to your previous model.</p>
+<p>Again compute the MAPE and visualize the prediction as you have done before. You can just reuse most of the code from the previous exercise. Compare the MAPE and your visualization with the model you build before. Did it improve?</p>
+<p>Now check out the other features that are available to you in the data set.
+Include additional features into your model, for example, stock data or other lagged data. Build several different models and each time evaluate them and compare it with the other models. Do you find models that perform significantly better than the benchmark univariate linear regression model? Keep in mind that you can only reasonably compare a model’s performance on previously unseen test data sets.
+Always keep visualizing the results, as this is one of the easiest methods to spot how well a model can predict the true values.</p>
+<p>Now take your best-performing model in terms of MAPE and based on your visual inspection. Use it for the next exercise.</p>
+</div>
+<div id="extend-your-model-to-several-countries" class="section level2" number="5.4">
+<h2><span class="header-section-number">5.4</span> Extend Your Model to Several Countries</h2>
+<p>Until now you’ve trained your model only on data for Germany. Train your model now on several countries on the train data set and evaluate how it performs on both the training and test observations. Do this by computing the MAPE and visualizing your predictions.</p>
+<p>Since you have different countries in your models, it might make sense to include a country-variable (dummy) in your regression.</p>
+<p><span class="math display">\[new\_confirmed_{it} = \beta_0 + \beta_1 gs\_corona_{it-10} + \beta_3 country_i +\epsilon_{it} \]</span></p>
+<p>A side note, which you can consider in your model, but don’t need to: In this model setup, <span class="math inline">\(\beta_3\)</span> tells you, by how much the number of new confirmed cases deviates from the baseline country, on average in <em>absolute terms</em>. This might not make too much sense. Take the example US and Germany. It is likely that those countries do not have a time-stable difference in the absolute number of new confirmed cases. Rather it might be the case that Germany on average has a constant percentage less daily new infections over time than the US. You can incorporate that behaviour into your model by not using the “level” of <span class="math inline">\(new\_confirmed\)</span> but instead using the natural logarithm <span class="math inline">\(ln(new\_confirmed)\)</span> as the dependent variable. The interpretation for the coefficients now changes. Google how you can interpret the coefficient for the country dummy in this case (hint: “level-level, log-level regression”).</p>
+<p>If you choose to make those transformations, don’t forget to transform your predicted values back from the log values to level by exponentiating them.</p>
+<p>Again evaluate your model’s predictions visually and in terms of MAPE. How well does your model work on other countries than Germany? Try to find reasons for country-specific differences and conclude if you would use such a model to predict the number of new daily infections.</p>
+<p><img src="output_files/figure-html/unnamed-chunk-40-1.png" width="1056" /></p>
+<p>Congratulations! You’ve made it to the end of your TechAcademy Data Science project.
+After visualizing the data in the first part, you’ve also set up predictive models in this section.
+If you stuck around until this part and managed to code the better part of the exercises, you’ve definitely earned your certificate!
+We hope you had fun learning Data Science with this data set and you enjoyed it – at least the parts where you didn’t get stuck forever because of some unexplainable coding error.</p>
+
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="exploratory-data-analysis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="excercise-checklist.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["output.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
