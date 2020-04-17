@@ -148,7 +148,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2.2" data-path="whats-data-science-and-how-do-i-do-it.html"><a href="whats-data-science-and-how-do-i-do-it.html#curriculum-1"><i class="fa fa-check"></i><b>2.2.2</b> Curriculum</a></li>
 <li class="chapter" data-level="2.2.3" data-path="whats-data-science-and-how-do-i-do-it.html"><a href="whats-data-science-and-how-do-i-do-it.html#links-1"><i class="fa fa-check"></i><b>2.2.3</b> Links</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="whats-data-science-and-how-do-i-do-it.html"><a href="whats-data-science-and-how-do-i-do-it.html#your-data-science-project"><i class="fa fa-check"></i><b>2.3</b> Your Data Science Project</a></li>
+<li class="chapter" data-level="2.3" data-path="whats-data-science-and-how-do-i-do-it.html"><a href="whats-data-science-and-how-do-i-do-it.html#your-data-science-project"><i class="fa fa-check"></i><b>2.3</b> Your Data Science Project</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="whats-data-science-and-how-do-i-do-it.html"><a href="whats-data-science-and-how-do-i-do-it.html#coding-meetups-and-requirements"><i class="fa fa-check"></i><b>2.3.1</b> Coding Meetups and Requirements</a></li>
+<li class="chapter" data-level="2.3.2" data-path="whats-data-science-and-how-do-i-do-it.html"><a href="whats-data-science-and-how-do-i-do-it.html#data-sources"><i class="fa fa-check"></i><b>2.3.2</b> Data Sources</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="introduction-to-your-project.html"><a href="introduction-to-your-project.html"><i class="fa fa-check"></i><b>3</b> Introduction to Your Project</a>
 <ul>
@@ -230,7 +234,7 @@ In a later model, we also want to include <code>lags</code> for the Google Searc
 <p>Use the function <code>cor()</code> to analyze the correlation between your variables in a correlation matrix. Which features display the highest correlation?</p>
 <p>Use the library <code>GGally</code> to generate a nice table that contains both scatterplots and correlations – but restrict yourself to promising variables. This plot is rather complex and takes increasingly more time to compute and becomes less readable the more variables you include. Maybe stick to the most promising 5 to 7 variables.</p>
 </div>
-<div class="tips python">
+<div class="tipsp python">
 <p>You have to compute the <code>new_confirmed</code> column first, which can easily be done with the pandas function <code>df[‘column_name´].diff()</code>, which computes the difference between the current value of the column and the value of the row before. But keep in mind that you first have to group your data by the different countries in the data frame.
 Quite similarly you can compute the lags using the pandas function <code>df[‘colum_name’].shift(1)</code>.</p>
 <p>To compute the correlation matrix you can use a function from the seaborn library, which builds on top of matplotlib and is often a useful extension.
@@ -308,12 +312,12 @@ plot. This is how the plot should look like:</p>
 <div class="tips r">
 <p>Generate two separate data sets: <code>train</code> and <code>test</code>. Split the original data by time as defined above and select only observations in Germany.</p>
 <p>Then use the <code>base</code> function <code>lm()</code> to train the model on your <code>train</code> data set. Save and inspect that model with summary().</p>
-<p>Use <code>predict()</code> to apply the model to your test data set. This function returns the predictions (<span class="math inline">\(\hat{y}_t\)</span> as a vector.</p>
+<p>Use <code>predict()</code> to apply the model to your test data set. This function returns the predictions <span class="math inline">\(\hat{y}_t\)</span> as a vector.</p>
 <p>It might make sense to name the relevant y-vectors in a structured way. You could think about such a structure:</p>
 <p><code>y_train_vec</code>, <code>yhat_train_vec</code>, <code>y_test_vec</code>, and <code>yhat_test_vec</code>, where <code>y</code> refers to the actual values and <code>yhat</code> denotes the predicted values.</p>
 <p>You can easily generate regression tables in nice LaTeX, HTML or text format with the package <code>stargazer</code>. Use it to compare different models among each other in your RMarkdown document.</p>
 </div>
-<div class="tips python">
+<div class="tipsp python">
 <p>Filter the data correspondingly and you should have for different pandas series:
 X_train = values of <code>gs_corona</code> in the train period
 X_test = values of <code>gs_corona</code> in the test period

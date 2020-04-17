@@ -1,6 +1,7 @@
 % Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames*,x11names*}{xcolor}
 %
 \documentclass[
   11pt,
@@ -39,7 +40,11 @@
 \hypersetup{
   pdftitle={Data Science Project Guide: Covid-19},
   pdfauthor={TechAcademy e.V.},
-  hidelinks,
+  colorlinks=true,
+  linkcolor=Maroon,
+  filecolor=Maroon,
+  citecolor=Blue,
+  urlcolor=blue,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
 \usepackage[top=0.5in, bottom=1.5in, left=1in, right=1in, a4paper]{geometry}
@@ -226,46 +231,46 @@
 \hypertarget{welcome}{%
 \section{Welcome!}\label{welcome}}
 
-In the first few chapters you will be introduced to the basics of the R and Python tracks respectively and you will find helpful explanations to questions you might have in the beginning of your coding journey. There will be a quick introduction to the Data Science track so that you can get started with the project quickly. So let's get started with the basics!
+In the first few chapters you will be introduced to the basics of the \texttt{R} and \texttt{Python} tracks respectively and you will find helpful explanations to questions you might have in the beginning of your coding journey. There will be a quick introduction to the Data Science track so that you can get started with the project quickly. So let's get started with the basics!
 
 In all tracks you will work on your project in small groups of fellow students. This not only helps you get the project done faster, it also helps make your results even better. Our experience shows: The different backgrounds of the members and discussing different opinions and ideas will produce the best results. Besides, it is of course more fun to work on a project together than to code alone!\\
 The groups can consist of a maximum of three members. You can choose your two teammates independently, we won't interfere with your arrangements. It is important that all group members complete the same level of difficulty (beginner or advanced), since the tasks are different in scope for each level. We explicitly encourage you to collaborate with students from different departments. This not only allows you to get to know people from other departments, but may even give you a whole new perspective on the project and tasks.
 When submitting it is important to note: for a certificate, each person must submit the project individually. However, this can be identical within your group. You can get more information at our first Coding Meetup which is going to take place on \textbf{May 20, 2020}.
 
-Every semester, we at TechAcademy think hard about a new project that is suited for you to learn data science. This semester, the topic choice was rather straightforward. Covid-19 is the dominating issue for our society at the time of writing this project in March and April 2020. We developed this case study as the crisis was unfolding in real time. So the recency of this topic comes at a small cost to you -- the data is changing rapidly and so are the results and conclusions. Not every textbook method works perfectly well on this data set -- but that's how it is in real life. We believe that you will learn a great deal about real life Data Science with this very timely topic. Maybe even more than you would do with a polished textbook case study and data set.
+Every semester, we at TechAcademy think hard about a new project that is suited for you to learn data science. This semester, the topic choice was rather straightforward. Covid-19 is the dominating issue for our society at the time of writing this project in March and April 2020. We developed this case study as the crisis was unfolding in real time. So the recency of this topic comes at a small cost to you -- the data is changing rapidly and so are the results and conclusions. Not every textbook method works perfectly well on this data set -- but that's how it is in real life. We believe that you will learn a great deal about real life Data Science with this very timely topic. Maybe even more than you would with a polished textbook case study and data set.
 
 \hypertarget{whats-data-science-and-how-do-i-do-it}{%
 \section{What's Data Science and How Do I Do It?}\label{whats-data-science-and-how-do-i-do-it}}
 
-Data science is a multi-layered field in which the use of the latest machine learning methods is only a sub-area. To get there, you'll need many steps before -- from collecting to manipulating to exploring the data. And after all, you will need to somehow communicate your findings.
+Data science is a multi-layered field in which the use of the latest machine learning methods is only a sub-area. To get there, you'll need many steps before -- from collecting to manipulating to exploring the data. And eventually, you will need to somehow communicate your findings.
 
-But first things first. To analyze data, it must be obtained. You need to know where to obtain it and how to integrate it in your respective tools. The data is rarely available as it would be needed for further processing. Familiarizing yourself with the information available, cleaning it up and processing it into the desired formats that can be read by humans and machines are important steps that often make up a large part of the work.\\
-Before the obtained data can be analyzed, the right tool must be selected and mastered: the programming language. The most popular languages are R, which was specially developed for this purpose, and Python, which is characterized by its versatility. The data scientist does not have to be a perfect software developer who masters every detail and paradigm, but the competent handling of syntax and idiosyncrasies is essential.
+But first things first. To analyze data, it must first be obtained. You need to know where to obtain it and how to integrate it in your respective tools. The data is rarely available as it would be needed for further processing. Familiarizing yourself with the information available, cleaning it up and processing it into the desired formats that can be read by humans and machines are important steps that often make up a large part of the work.
+
+Before the obtained data can be analyzed, the right tool must be selected and mastered: the programming language. The most often used languages for Data Science are \texttt{R}, which was explicitly developed for statistics, and \texttt{Python}, which is characterized by its additional versatility. The data scientist does not have to be a perfect software developer who masters every detail and paradigm, but the competent handling of syntax and idiosyncrasies is essential.
 There are some well-developed method collections, so-called packages or libraries, which provide a lot of functionality. The use of these collections also has to be learned and mastered.
 Once all of this is achieved, the data can finally be analyzed. Here too, it is important to know and understand the multitude of statistical approaches in order to be able to choose the right method for the problem at hand. The newest, best, most beautiful neural network is not always the solution for everything.\\
-One step is still missing in the data science process: understanding and communicating the results. The results are often not spontaneously intuitive or even surprising. Here, the specific expertise and creativity can be played out, especially in the visualization.
+One step is still missing in the data science process: understanding and communicating the results. The results are often not spontaneously intuitive or sometimes even surprising. Here, the specific expertise and creativity can be played out, especially in the visualization.
 
 \hypertarget{whats-r}{%
 \subsection{What's R?}\label{whats-r}}
 
-R is a programming language that was developed by statisticians in the early 1990s for use in the calculation and visualization of statistical applications. A lot has happened since then and by now R is one of the most widely used programming languages in the field of data science. Code in R does not have to be compiled, but can be used interactively and dynamically. This makes it possible to quickly gain basic knowledge about existing data and to display it graphically.\\
-R offers much more than just programming, but also a complete system for solving statistical problems. A large number of packages and interfaces are available, with which the functionality can be expanded and integration into other applications is made possible.
+\texttt{R} is a programming language that was developed by statisticians in the early 1990s for use in the calculation and visualization of statistical applications. A lot has happened since then and by now, \texttt{R} is one of the most widely used programming languages in the field of data science. Code in \texttt{R} does not have to be compiled, but can be used interactively and dynamically. This makes it possible to quickly gain basic knowledge about existing data and to display it graphically.\\
+\texttt{R} offers much more than just programming, but also a complete system for solving statistical problems. A large number of packages and interfaces are available, with which the functionality can be expanded and integration into other applications is made possible.
 
 \hypertarget{rstudio-cloud}{%
 \subsubsection{RStudio Cloud}\label{rstudio-cloud}}
 
-Before you can use R, you usually have to install some separate programs locally on your computer. Typically, you first install a ``raw'' version of R. In theory, you can then already start programming. However, it is very difficult to carry out an entire project with it. That's why there is RStudio, an Integrated Development Environment (IDE) for R. This includes many essential features that simplify programming with R. Among other things, an auto-completion of your code, a nicely structured user interface and many expansion options.
+Before you can use \texttt{R}, you usually have to install some separate programs locally on your computer. Typically, you first install a ``raw'' version of \texttt{R}. In theory, you can then already start programming. However, it is very difficult to carry out an entire project with it. That's why there is RStudio, an Integrated Development Environment (IDE) for \texttt{R}. This includes many essential features that simplify programming with \texttt{R}. Among other things, an auto-completion of your code, a nicely structured user interface and many expansion options.
 
-Experience has shown that installing R and RStudio locally takes some effort. Fortunately, RStudio also has a cloud solution that eliminates these steps: RStudio Cloud. There it is possible to edit your project in exactly the same IDE in the browser without any prior installations. You can also easily switch your project from private to public and give your team an insight into your code via a link or by giving them access to the workspace directly. In this way you are able to easily exchange ideas within your team.
+Experience has shown that installing \texttt{R} and RStudio locally takes some effort. Fortunately, RStudio also has a cloud solution that eliminates these steps: RStudio Cloud. There it is possible to edit your project in exactly the same IDE in the browser without any prior installations. You can also easily switch your project from private to public and give your team an insight into your code via a link or by giving them access to the workspace directly. In this way you are able to easily exchange ideas within your team.
 
 \hypertarget{curriculum}{%
 \subsubsection{Curriculum}\label{curriculum}}
 
-The following list shows the required DataCamp courses for the Data Science with R Track. As a beginner, please stick to the courses of the ``beginner'' program, ambitious beginners can of course also take the advanced courses afterwards. However, the courses should be worked through in the order in which they are listed.\\
+The following list shows the required DataCamp courses for the Data Science with \texttt{R} Track. As a beginner, please stick to the courses of the ``beginner'' program, ambitious beginners can of course also take the advanced courses afterwards. However, the courses should be worked through in the order in which they are listed.\\
 The same applies to the advanced courses. Here, too, the specified courses should be processed in the given order. Since it can of course happen that you have already mastered the topics of an advanced course, individual courses can be replaced. The topics of the advanced courses are given in key points. If these key points seem familiar to you, then take a look at the table of contents of the corresponding DataCamp course. If you are convinced that this course does not provide any added value for you, it can be replaced by one of the courses in the ``Exchange Pool'' (see list). However, this exchange course should not be processed until all other courses in the advanced course have been completed.
 
-Both beginners and advanced learners must have completed at least two thirds of the curriculum in order to receive the certificate. For the beginners this means at least up to the course ``Data Visualization with ggplot2 (Part 1)'' and for the advanced at least up to ``Supervised Learning in R: Classification''. In addition, at least two thirds of the project tasks must have been completed.\\
-Data Science in R (Beginner)
+Both beginners and advanced learners must have completed at least two thirds of the curriculum in order to receive the certificate. For the beginners this means at least up to the course ``Data Visualization with ggplot2 (Part 1)'' and for the advanced at least up to ``Supervised Learning in \texttt{R}: Classification''. In addition, at least two thirds of the project tasks must have been completed.
 
 \begin{tips}r
 
@@ -357,26 +362,26 @@ Data Science in R (Beginner)
 \hypertarget{whats-python}{%
 \subsection{What's Python?}\label{whats-python}}
 
-Python is a dynamic programming language. The code is executed in the interpreter, which means that the code does not first have to be compiled. This makes Python very easy and quick to use. The good usability, easy readability and simple structuring were and still are core ideas in the development of this programming language.
-Basically, you can use Python to program according to any paradigm, whereby structured and object-oriented programming is easiest due to the structure of the language, but functional or aspect-oriented programming is also possible. These options give users great freedom to design projects the way they want, but also great freedom to write code that is difficult to understand and confusing. For this reason, certain standards that are based on the so-called Python Enhancement Proposals (PEP) have developed over the decades.
+\texttt{Python} is a dynamic programming language. The code is executed in the interpreter, which means that the code does not first have to be compiled. This makes \texttt{Python} very easy and quick to use. The good usability, easy readability and simple structuring were and still are core ideas in the development of this programming language.
+Basically, you can use \texttt{Python} to program according to any paradigm, whereby structured and object-oriented programming is easiest due to the structure of the language, but functional or aspect-oriented programming is also possible. These options give users great freedom to design projects the way they want, but also great freedom to write code that is difficult to understand and confusing. For this reason, certain standards that are based on the so-called \texttt{Python} Enhancement Proposals (PEP) have developed over the decades.
 
 \hypertarget{anaconda-and-jupyter}{%
 \subsubsection{Anaconda and Jupyter}\label{anaconda-and-jupyter}}
 
-Before you can use Python, it must be installed on the computer. Python is already installed on Linux and Unix systems (such as macOS), but often it is an older version. Since there are differences in the handling of Python version 2 -- which is not longer supported anymore -- and version 3, we decided to work with version 3.6 or higher.
+Before you can use \texttt{Python}, it must be installed on the computer. \texttt{Python} is already installed on Linux and Unix systems (such as macOS), but often it is an older version. Since there are differences in the handling of \texttt{Python} version 2 -- which is not longer supported anymore -- and version 3, we decided to work with version 3.6 or higher.
 
-One of the easiest ways to get both Python and most of the best known programming libraries is to install Anaconda. There are detailed explanations for the installation on all operating systems on the website of the provider:
-\url{https://docs.anaconda.com/anaconda/install/}\\
-With Anaconda installed, all you have to do is open the Anaconda Navigator and you're ready to go. There are two ways to get started: Spyder or Jupyter. Spyder is the integrated development environment (IDE) for Python and offers all possibilities from syntax highlighting to debugging (links to tutorials below). The other option is to use Jupyter or Jupyter notebooks.It is an internet technology based interface for executing commands. The big advantage of this is that you can quickly write short code pieces and try them out interactively without writing an entire executable program.
+One of the easiest ways to get both \texttt{Python} and most of the best known programming libraries is to install Anaconda. There are detailed explanations for the installation on all operating systems on the \href{https://docs.anaconda.com/anaconda/install/}{website} of the provider.
+
+With Anaconda installed, all you have to do is open the Anaconda Navigator and you're ready to go. There are two ways to get started: Spyder or Jupyter. Spyder is the integrated development environment (IDE) for \texttt{Python} and offers all possibilities from syntax highlighting to debugging (links to tutorials below). The other option is to use Jupyter or Jupyter notebooks. It is an internet technology based interface for executing commands. The big advantage of this is that you can quickly write short code pieces and try them out interactively without writing an entire executable program.
 Now you can get started! If you have not worked with Jupyter before, we recommend that you complete the course on DataCamp (\url{https://www.datacamp.com/projects/33}) first. There you will get to know many tips and tricks that will make your workflow with Jupyter much easier.\\
 In order to make your work and, above all, the collaboration easier, we are providing you with a platform that contains a Jupyter environment with the necessary libraries, as well as all data necessary for the project. There you will also find a brief explanation in the form of a running Jupyter notebook and introductions to the work with the data sets we have selected. Using a regular folder structure, you can quickly navigate to the folder of your group and your personal folder, in which the necessary files are stored for a smooth start.
 
 \hypertarget{curriculum-1}{%
 \subsubsection{Curriculum}\label{curriculum-1}}
 
-The following list shows the DataCamp courses for the Python data science track. As a beginner, please follow the courses for the beginner level. These should be processed in the order in which they are listed.\\
+The following list shows the DataCamp courses for the \texttt{Python} data science track. As a beginner, please follow the courses for the beginner level. These should be processed in the order in which they are listed.\\
 The same applies to the advanced courses. Here, too, the specified courses should be processed in the given order. Since it can of course happen that you have already mastered the topics of an advanced course, individual courses can be replaced. The topics of the advanced courses are given in brief. If these key points seem familiar to you, then take a look at the table of contents of the corresponding DataCamp course.
-If you are convinced that this course does not provide any added value for you, it can be replaced by one of the courses in the ``Exchange Pool'' (see list). However, this course should not be processed until all other courses in the intermediate Python course have been completed.
+If you are convinced that this course does not provide any added value for you, it can be replaced by one of the courses in the ``Exchange Pool'' (see list). However, this course should not be processed until all other courses in the intermediate \texttt{Python} course have been completed.
 
 Both beginners and advanced learners must have completed at least two thirds of the curriculum in order to receive the certificate. For beginners this means at least up to the course ``Manipulating DataFrames with Pandas'' and for advanced learners at least up to the ``Project: Bitcoin Cryptocurrency Market''. In addition, at least two thirds of the project tasks have to be completed.
 
@@ -393,19 +398,15 @@ Both beginners and advanced learners must have completed at least two thirds of 
 \item
   \href{https://www.datacamp.com/courses/python-data-science-toolbox-part-1}{Python for Data Science Toolbox (Part 1) (3h)}
 \item
-  \href{https://www.datacamp.com/courses/importing-data-in-python-part-1}{Importing Data in Python (Part 1) (4h)}
-\item
-  \href{https://www.datacamp.com/courses/pandas-foundations}{Pandas Foundation (4h)}
-\item
   \href{https://www.datacamp.com/courses/introduction-to-matplotlib}{Introduction to Matplotlib (4h)}
 \item
   \href{https://www.datacamp.com/courses/manipulating-dataframes-with-pandas}{Manipulating DataFrames with Pandas (4h)}
 \item
   \href{https://www.datacamp.com/courses/merging-dataframes-with-pandas}{Merging DataFrames with pandas (4h)}
 \item
-  \href{https://www.datacamp.com/projects/33}{Introduction to DataCamp Projects in Python (2h)}
-\item
   \href{https://www.datacamp.com/courses/exploratory-data-analysis-in-python}{Exploratory Data Analysis in Phyton (4h)}
+\item
+  \href{https://www.datacamp.com/projects/33}{Introduction to DataCamp Projects in Python (2h)}
 \item
   \href{https://www.datacamp.com/courses/introduction-to-linear-modeling-in-python}{Introduction to Linear Modeling in Python (4h)}
 \end{itemize}
@@ -419,23 +420,19 @@ Both beginners and advanced learners must have completed at least two thirds of 
 \item
   \href{https://www.datacamp.com/courses/python-data-science-toolbox-part-1}{Python Data Science Toolbox (Part 1) (3h)}: Default arguments, Lambdas, Error handling
 \item
-  \href{https://www.datacamp.com/courses/python-data-science-toolbox-part-2}{Python Data Science Toolbox (Part 2) (4h)}: Iterators, generators,List comprehension
-\item
-  \href{https://www.datacamp.com/courses/importing-data-in-python-part-1}{Importing Data in Python (Part 1) (4h)}: Import.csv, .txt, SQL
-\item
-  \href{https://www.datacamp.com/courses/importing-data-in-python-part-2}{Importing Data in Python (Part 2) (2h)}: Interactin with APIs
+  \href{https://www.datacamp.com/courses/python-data-science-toolbox-part-2}{Python Data Science Toolbox (Part 2) (4h)}: Iterators, generators, List comprehension
 \item
   \href{https://www.datacamp.com/courses/cleaning-data-in-python}{Cleaning Data in Python (4h)}: Using pandas for Data cleaning
 \item
   \href{https://www.datacamp.com/projects/82}{Exploring the Bitcoin Cryptocurrency Market (3h)}: Small project
 \item
+  \href{https://www.datacamp.com/courses/exploratory-data-analysis-in-python}{Exploratory Data Analysis in Phyton (4h)}: How to start a data analysis
+\item
+  \href{https://www.datacamp.com/courses/introduction-to-linear-modeling-in-python}{Introduction to Linear Modeling in Python (4h)}: Linear Regression, sklearn
+\item
   \href{https://www.datacamp.com/courses/supervised-learning-with-scikit-learn}{Supervised Learning with Scikit-Learn (4h)}: Classification, Regression, Tuning
 \item
-  \href{https://www.datacamp.com/courses/unsupervised-learning-in-python}{Unsupervised Learning in Python (4h)}: Clustering, t-SNE, Decorrelation
-\item
   \href{https://www.datacamp.com/courses/linear-classifiers-in-python}{Linear Classifiers in Python (4h)}: Logistic regression, SVM, Loss functions
-\item
-  \href{https://www.datacamp.com/courses/deep-learning-in-python}{Deep Learning in Python (4h)}: Neural Networks, Backpropagation, Keras
 \end{itemize}
 
 \textbf{Data Science with Python (Advanced) - Exchange Pool}
@@ -459,7 +456,11 @@ Both beginners and advanced learners must have completed at least two thirds of 
 \item
   \href{https://www.datacamp.com/courses/writing-efficient-python-code}{Writing Efficient Python Code}
 \item
-  \href{https://www.datacamp.com/courses/optimizing-python-code-with-pandas}{Optimize Pzthon Code with pandas}
+  \href{https://www.datacamp.com/courses/unsupervised-learning-in-python}{Unsupervised Learning in Python (4h)}
+\item
+  \href{https://www.datacamp.com/courses/optimizing-python-code-with-pandas}{Optimize Python Code with pandas}
+\item
+  \href{https://www.datacamp.com/courses/deep-learning-in-python}{Deep Learning in Python (4h)}
 \item
   \href{https://www.datacamp.com/courses/forecasting-using-arima-models-in-python}{Forecasting using ARIMA Models}
 \end{itemize}
@@ -496,11 +497,23 @@ Further Explanations:
 \hypertarget{your-data-science-project}{%
 \subsection{Your Data Science Project}\label{your-data-science-project}}
 
+\hypertarget{coding-meetups-and-requirements}{%
+\subsubsection{Coding Meetups and Requirements}\label{coding-meetups-and-requirements}}
+
 Now that you have learned the theoretical foundation in the DataCamp courses, you can put your skills into practice. We have put together a project for you based on real data sets. You can read about the details in the following chapters of this project guide.\\
 Of course, we will also go into more detail about the project and the tools that go with it. We will discuss everything you need to know during the first Coding Meetup, which will take place on \textbf{May 20, 2020}. After that, the work on the project will officially begin.
 You can find the exact project tasks together with further explanations and hints in the following chapters.
 
 To receive the certificate, it is essential that you have solved at least two thirds of the ``Exploratory Data Analysis'' part of the project. For the advanced participants, the entire ``forecast using statistical models'' part is added. In addition, two thirds of the respective curriculum on DataCamp must be completed. You can find more detailed information on this in the ``Curriculum'' section of the respective programming language above.
+
+\hypertarget{data-sources}{%
+\subsubsection{Data Sources}\label{data-sources}}
+
+For this project, we use several publicly available data sources. The Covid-19 infection data is provided by the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE). They provide an accessible, daily updated \href{https://github.com/CSSEGISandData/COVID-19}{GitHub repository} with worldwide case data.
+
+For Google search data, we use \href{https://trends.google.com/}{Google Trends}, a very interesting free service. If you're interested in diving further into this data source, you can easily download data from this webiste or directly via \texttt{R} or \texttt{Python} packages.
+
+Our stock market data comes from \href{finance.yahoo.com}{Yahoo! Finance}, which is also easily downloadable directly into your programming environment with convenient packages in both languages.
 
 \newpage
 
@@ -577,7 +590,7 @@ Did you know that Google provides quite extensive public access to the relative 
 
 Now it is time to get a quick overview of the data set. What is the structure of the data set, which variables does it contain, what is the type of the variables? What is noticeable?
 
-Before we can get started with the actual visualization, we have to tweak the data set a little so that the different commands will work later on. Sometimes this sounds easier than it is done, but very often the format of the data is not compatible and you have to figure out why and how to manipulate the data accordingly.
+Before we can get started with the actual visualization, we have to tweak the data set a little so that the different commands will work later on. Sometimes this is easier said than done and very often the format of the data is not usable at first -- you have to figure out why and how to manipulate the data make it useful for your next steps.
 
 To create a time series plot in the next step, it is necessary for the date variable to have the right format. Do you already know how to do that from your DataCamp courses?
 
@@ -591,7 +604,7 @@ Looking at the line plot, you can see a clear pattern with respect to different 
 
 \begin{tips}r
 
-\texttt{R} provides many different ways to import data. For starters, use the built-in \texttt{base} function \texttt{read.csv()} and define the path to the Google Trends file in the argument of the function. We have stored all data for your project in the folder \texttt{data}. Don't forget to use quotation marks \texttt{”...”} for the path -- you always need to use them if you specify \texttt{string}-variables in \texttt{R}. Also, you will need to adapt to the \texttt{R}-way of specifying paths. Defining a file path can either be done with \texttt{\textbackslash{}\textbackslash{}} or \texttt{/}, but not via a single backslash \texttt{\textbackslash{}} like in your explorer.
+\texttt{R} provides many different ways to import data. For starters, use the built-in \texttt{base} function \texttt{read.csv()} and define the path to the Google Trends file in the argument of the function. We have stored all data for your project in the folder \texttt{data}. Don't forget to use quotation marks \texttt{”...”} for the path -- you always need to use them when you specify \texttt{string}-variables in \texttt{R}. Also, you will need to adapt to the \texttt{R}-way of specifying paths. Defining a file path can either be done with \texttt{\textbackslash{}\textbackslash{}} or \texttt{/}, but not via a single backslash \texttt{\textbackslash{}} like in your explorer.
 
 Use the \texttt{base} functions \texttt{str()} and \texttt{summary()} to print useful information on the data type and summary statistics for your \texttt{gtrends} data set.
 
@@ -616,10 +629,18 @@ Now the only thing left to do is to plot your first graph!
 \end{Shaded}
 
 Make the plot visually more appealing by using additional pyplot methods and by passing additional arguments to those methods. For example:
-- For the \texttt{.plot()} method you can use additional keyword arguments, like \texttt{color}, \texttt{marker}, \texttt{linewidth}, \texttt{linestyle}, and \texttt{markersize}.
-- Use the \texttt{.legend()} method to add a legend.
-- You can also add labels to your x- and y-axis by passing a string argument to the \texttt{.xlabel()} and \texttt{.ylabel()} methods.
-- You can rotate the ticks on the x-axis with \texttt{.plt.xticks(rotation=45)}.
+
+\begin{itemize}
+\tightlist
+\item
+  For the \texttt{.plot()} method you can use additional keyword arguments, like \texttt{color}, \texttt{marker}, \texttt{linewidth}, \texttt{linestyle}, and \texttt{markersize}.
+\item
+  Use the \texttt{.legend()} method to add a legend.
+\item
+  You can also add labels to your x- and y-axis by passing a string argument to the \texttt{.xlabel()} and \texttt{.ylabel()} methods.
+\item
+  You can rotate the ticks on the x-axis with \texttt{.plt.xticks(rotation=45)}.
+\end{itemize}
 
 Find a full list of methods in the \href{https://matplotlib.org/3.1.1/api/pyplot_summary.html}{official matplotlib documentation}.
 
@@ -658,12 +679,12 @@ You can label individual entries of a factor-type vector. That doesn't change th
 
 Import the stock data as a data frame and explore the data, just as you've done with the Google Trends data. Notice that by using only the \texttt{.head()} method, one could think that the csv-file contains only data about one single stock -- this is not the case.
 
-It would probably be easier to work with a data frame with only the columns we actually need, i.e.~\texttt{symbol}, \texttt{date}, and \texttt{close}. Also, it would probably be nicer to work with the data frame if the \texttt{date} column would be the index column, the values of the \texttt{symbol} column would represent the column names, and the \texttt{close} prices would be the data frame's values: Let's use pandas' \texttt{.pivot()} method to achieve both at once: \texttt{df.pivot(index=...,\ columns=...,\ values=...)}.
+It would probably be easier to work with a data frame which only contains the columns we actually need, i.e.~\texttt{symbol}, \texttt{date}, and \texttt{close}. Also, it would probably be nicer to work with the data frame if the \texttt{date} column would be the index column, the values of the \texttt{symbol} column would represent the column names, and the \texttt{close} prices would be the data frame's values: Let's use pandas' \texttt{.pivot()} method to achieve both at once: \texttt{df.pivot(index=...,\ columns=...,\ values=...)}.
 
 Check if the new index is formatted as a datetime object. If not, apply the same method as you did on the Google Trends data frame.
 Now take a look at the whole data frame: Do you notice the \texttt{NaN}s? Try to find out why this is the case by searching it up online. However, if we would plot this data frame in a plot, we might end up with broken lines. One workaround to avoid this, could be to use the \texttt{.interpolate()} method on the data frame, which fills the \texttt{NaN} values using a linear method by default.
 
-To create multiple plots in one figure you can use the example code below as a template. The code starts by creating a figure object, which is a container for plot elements. The function \texttt{plt.subplot(2,2,i)} adds a plot in the i-th window of the 2x2 grid inside the figure. Then, the data frame is filtered by the Netflix stock and the plt.plot() method is used to create the first plot.
+To create multiple plots in one figure you can use the example code below as a template. The code starts by creating a figure object, which is a container for plot elements. The function \texttt{plt.subplot(2,2,i)} adds a plot in the i-th window of the 2x2 grid inside the figure. Then, the data frame is filtered by the Netflix stock and the \texttt{plt.plot()} method is used to create the first plot.
 Continue filling the next windows of the 2x2 grid with stock data from other companies.
 
 \begin{Shaded}
@@ -690,7 +711,7 @@ Can you find a way to reduce your code using a for-loop? Try to address the chan
 Afterwards you can try to make your plot look nicer.
 Use \texttt{fig.suptitle()} to add a title.
 If you feel like needing to adjust spaces between the plots, you can use the \texttt{plt.subplots\_adjust()} to do so.
-Try using \texttt{fig.autofmt\_xdate()} to format the date tick labels. If you need help with these functions, try to find out what they do and how to use them in the \href{https://matplotlib.org/3.2.1/contents.html}{matplotlib documentation}
+Try using \texttt{fig.autofmt\_xdate()} to format the date tick labels. If you need help with these functions, try to find out what they do and how to use them in the \href{https://matplotlib.org/3.2.1/contents.html}{matplotlib documentation}.
 
 \end{tipsp}
 
@@ -732,7 +753,7 @@ Use \texttt{ggplot2} again to visualize your newly generated time series. Don't 
 
 Import the \texttt{confirmed.csv} data as a new data frame and fill the empty spaces (\texttt{NaN}) using \texttt{.fillna(0)}. Afterwards you can use \texttt{df.isna()} to check if there are no missing values in the data frame. This will return True (corresponds to 1) and False (corresponds to 0) if there is a missing value or not. If you \texttt{sum()} over this data frame, you get the amount of missing values which should be zero now.
 
-Since we are not interested in every single country's number of confirmed cases yet, the idea is to group all dates together by summing up the numbers of confirmed cases for each day. You can use pandas' \texttt{groupby()} function, which itself returns no result -- you also have to apply an aggregation function like \texttt{groupby(by=’time’).max()}, \texttt{groupby(by’time’).mean()} or \texttt{groupby(by=’time’).sum()}. For this task you can use the latter.
+Since we are not interested in every single country's number of confirmed cases yet, the idea is to group all dates together by summing up the numbers of confirmed cases for each day. You can use pandas' \texttt{groupby()} function, which itself returns no result -- you also have to apply an aggregation function like \texttt{groupby(by=’time’).max()}, \texttt{groupby(by=’time’).mean()} or \texttt{groupby(by=’time’).sum()}. For this task you can use the latter.
 The time column should now be set as index -- make sure that its values are formatted as datetime objects.
 Finally, you can create the graph by passing the right column of the data frame to the \texttt{plot()} method of the matplotlib library.
 
@@ -774,7 +795,7 @@ Because we have to repeat the same procedure with each of the 9 countries, it is
  
 \CommentTok{\# for{-}loop over the countries}
 \ControlFlowTok{for}\NormalTok{ country }\KeywordTok{in}\NormalTok{ top\_countries:}
-\NormalTok{    confirmed\_list.append(}\CommentTok{\#Your code to filter confirmed cases by country)}
+\NormalTok{    confirmed\_list.append(}\CommentTok{\#your code to filter confirmed cases by country)}
 \end{Highlighting}
 \end{Shaded}
 
@@ -795,7 +816,7 @@ Similar to your first data set, the merged data frame has missing values. Replac
 
 When talking about the coronavirus many people are only mentioning the total number of confirmed cases. But it makes sense to keep track of the currently infected patients and not only the total infected. This way it is easier to see whether the virus is actually receding or still on the rise. This means we want to have a look at the number of confirmed cases that are still infected and not dead or healed already. For this you can subtract the number of deaths and recovered cases from the number of confirmed cases and create a new variable that you can call \texttt{netinfected}. Visualize the development of confirmed cases, deaths, netinfected, and recovered in an area plot for the top 9 countries.
 
-A quick remark on the underlying data for \texttt{recovered} and therby also \texttt{netfinfected}: At first, Johns Hopkins University (JHU) provided the variable \texttt{recovered}. Over time, gathering reliable data on the number of healed patients grew increasingly difficult.
+A quick remark on the underlying data for \texttt{recovered} and thereby also \texttt{netfinfected}: At first, Johns Hopkins University (JHU) provided the variable \texttt{recovered}. Over time, gathering reliable data on the number of healed patients grew increasingly difficult.
 German hospitals for example have no legal obligation to report when a patient recovered.
 That's why JHU stopped providing this data. As a quick work-around, we assume that two weeks after patients were infected they count as recovered if they did not die. This is a rough estimate and will not always be true, but sometimes you have to make some reasonable assumptions to work with real-world data.
 
@@ -837,7 +858,7 @@ Another enhancement of your visualization is to plot \texttt{recovered} and \tex
 
 First, we need to merge the data frames \texttt{confirmed}, \texttt{deaths} and \texttt{recovered} -- which means we want to form one big data frame containing the information of the three individual data frames. They share the same column \texttt{id} and can be merged over this value. You can merge two data frames with the pandas merge function: \texttt{merged\_df\ =\ pd.merge(df1,\ df2,\ on=’id’)}. Now you still need to merge the third data frame.
 
-After the three data frames are merged, we have to fill up \texttt{NaN} (missing values) with the pandas \texttt{df.fillna(0)} function.
+After the three data frames are merged, we have to fill up \texttt{NaN}s (missing values) with the pandas \texttt{df.fillna(0)} function.
 
 Now we want to compute the amount of \texttt{netinfected} people, which can be computed by \texttt{netinfected\ =\ confirmed\ –\ recovered\ –\ deaths}. Create a new column in the data frame and compute this value for each row.
 
@@ -881,7 +902,7 @@ You might want to flip both axes to have your barplot better structured. There i
 
 Use the data frame from before, i.e.~the data frame should contain at least the columns representing countries, numbers of deaths, time, net infected, and number of confirmed cases.
 If you happen to have converted any column to its negative, then convert it back to positive.
-Since we are not interested in the whole time series, but only in the latest data available, we can filter the data frame by the latest available date. You can use \texttt{.max()} to get the \texttt{highest} date in the appropriate column and use\texttt{df{[}df{[}‘time’{]}\ ==\ latest\_date{]}} to filter by the columns of that date.
+Since we are not interested in the whole time series, but only in the latest data available, we can filter the data frame by the latest available date. You can use \texttt{.max()} to get the \texttt{highest} date in the appropriate column and use \texttt{df{[}df{[}‘time’{]}\ ==\ latest\_date{]}} to filter by the columns of that date.
 
 We only want to plot nine countries with the highest number of confirmed cases: Sort by the appropriate column doing \texttt{df.sort\_values(by={[}‘...’{]},\ ascending=False)}, and then slice the data frame such that it only consists of 9 rows.
 
@@ -898,7 +919,7 @@ Finally, create a figure using \texttt{plt.figure()} and plot the horizontal bar
 \end{Shaded}
 
 Notice that, as already mentioned, we are using pandas' \texttt{df.plot.barh()} indestad of matplotlib's \texttt{plt.barh()} method (which we are going to use in the next exercise).
-A brief explanation to gca(): gca stands for \texttt{get\ current\ axes} and returns the current axes instance on the current figure. If the current axes doesn't exist the appropriate axes will be created. You can try to create the plot without the \texttt{ax} keyword argument and see what happens.
+\texttt{gca()} stands for get current axes and returns the current axes instance on the current figure. If the current axes don't exist, the appropriate axes will be created. You can try to create the plot without the \texttt{ax} keyword argument and see what happens.
 
 Don't forget to adjust/add title, labels, etc.
 
@@ -951,10 +972,10 @@ For us, this means that we can iterate through each country in the \texttt{highe
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{cols }\OperatorTok{=} \BuiltInTok{list}\NormalTok{()  }\CommentTok{\# Initiate empty list}
+\NormalTok{cols }\OperatorTok{=} \BuiltInTok{list}\NormalTok{()  }\CommentTok{\# initiate empty list}
  
 \ControlFlowTok{for}\NormalTok{ country }\KeywordTok{in}\NormalTok{ highest\_mortality[‘country’]:}
-    \CommentTok{\# If country also in highest\_confirmed, then highlight in blue}
+    \CommentTok{\# if country also in highest\_confirmed, then highlight in blue}
     \ControlFlowTok{if}\NormalTok{ country }\KeywordTok{in}\NormalTok{ highest\_confirmed[‘country’].values:}
 \NormalTok{        cols.append(‘blue’)}
     \ControlFlowTok{else}\NormalTok{:}
@@ -995,7 +1016,7 @@ A problem you will run into with this technique of map generation is that the pl
 
 \begin{tipsp}p
 
-As a first step, we want to visualize the amount of confirmed cases in each country with circles, which size is in relation to this number.
+As a first step, we want to visualize the outbreak in each country with circles, where each country's circle size is is dependent on the amount of confirmed cases.
 
 Let's start by importing the familiar \texttt{confirmed.csv} file.
 The goal of our map is to inform the viewer about the number of confirmed cases per country for the latest date available: Find out the latest date and filter the data frame by that date.
@@ -1003,16 +1024,16 @@ The goal of our map is to inform the viewer about the number of confirmed cases 
 Filter the data frame by the columns of interest to facilitate the iteration over each row. The columns are: \texttt{country}, \texttt{latitude}, \texttt{longitude}, and \texttt{confirmed}.
 Now that our data frame is in the right format, it is time to check out the documentation of the \href{https://ipyleaflet.readthedocs.io/en/latest/}{ipyleaflet library}. This is the library we will use to create our maps.
 
-For our first map, we will use the module \texttt{Circle\ Marker}. Please be sure to take a look at the example in the documentation before proceeding, especially for knowing which modules you need to import!
+For our first map, we will use the module ``Circle Marker''. Please be sure to take a look at the example in the documentation before proceeding, especially for knowing which modules you need to import!
 
-If you copy-paste-run the example in the docs, you can see that it plots only one single point on the map -- but we want multiple circles!
+If you copy-paste-run the example in the docs, you can see that it plots only one single circle on the map -- but we want multiple circles!
 
 Let's start by making sure that when creating the instance \texttt{m} of the \texttt{Map} class you pass the positional argument \texttt{center=(48,\ -2)} (which might differ from the example in the documentation):
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \NormalTok{m }\OperatorTok{=}\NormalTok{ Map(center}\OperatorTok{=}\NormalTok{(}\DecValTok{48}\NormalTok{, }\OperatorTok{{-}}\DecValTok{2}\NormalTok{), zoom}\OperatorTok{=}\DecValTok{9}\NormalTok{, basemap}\OperatorTok{=}\NormalTok{basemaps.CartonDB.Positron)}
-\CommentTok{\# feel free to change the zoom and layout of the basemap.}
+\CommentTok{\# Feel free to change the zoom and layout of the basemap.}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1021,7 +1042,7 @@ In order to plot multiple circles, you may want to iterate through every row in 
 \begin{Shaded}
 \begin{Highlighting}[]
 \ControlFlowTok{for}\NormalTok{ i, country, }\BuiltInTok{long}\NormalTok{, lat, nr }\KeywordTok{in}\NormalTok{ confirmed\_df.itertuples(index}\OperatorTok{=}\VariableTok{True}\NormalTok{):}
-    \ControlFlowTok{pass}  \CommentTok{\# Your function body here}
+    \ControlFlowTok{pass}  \CommentTok{\# your for{-}loop body here}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1206,7 +1227,7 @@ Use the library \texttt{GGally} to generate a nice table that contains both scat
 
 \end{tips}
 
-\begin{tips}p
+\begin{tipsp}p
 
 You have to compute the \texttt{new\_confirmed} column first, which can easily be done with the pandas function \texttt{df{[}‘column\_name´{]}.diff()}, which computes the difference between the current value of the column and the value of the row before. But keep in mind that you first have to group your data by the different countries in the data frame.
 Quite similarly you can compute the lags using the pandas function \texttt{df{[}‘colum\_name’{]}.shift(1)}.
@@ -1215,7 +1236,7 @@ To compute the correlation matrix you can use a function from the seaborn librar
 Import seaborn using \texttt{import\ seaborn\ as\ sns} and use than the seaborn function \texttt{sns.heatmap(df.corr())}. This function takes as input a pandas data frame on which the pandas function \texttt{corr()} is applied -- which computes the correlations between the different columns. If you compute the correlation heatmap for all columns in the data frame, it can be a bit confusing, therefore select just a subset of all columns.
 You can then visualize the correlations in a scatter plot using the seaborn function \texttt{sns.pairplot(df)}, which again takes a data frame as input.
 
-\end{tips}
+\end{tipsp}
 
 \hypertarget{build-a-simple-model-prototype}{%
 \subsection{Build a Simple Model Prototype}\label{build-a-simple-model-prototype}}
@@ -1274,7 +1295,7 @@ Generate two separate data sets: \texttt{train} and \texttt{test}. Split the ori
 
 Then use the \texttt{base} function \texttt{lm()} to train the model on your \texttt{train} data set. Save and inspect that model with summary().
 
-Use \texttt{predict()} to apply the model to your test data set. This function returns the predictions (\(\hat{y}_t\) as a vector.
+Use \texttt{predict()} to apply the model to your test data set. This function returns the predictions \(\hat{y}_t\) as a vector.
 
 It might make sense to name the relevant y-vectors in a structured way. You could think about such a structure:
 
@@ -1284,7 +1305,7 @@ You can easily generate regression tables in nice LaTeX, HTML or text format wit
 
 \end{tips}
 
-\begin{tips}p
+\begin{tipsp}p
 
 Filter the data correspondingly and you should have for different pandas series:
 X\_train = values of \texttt{gs\_corona} in the train period
@@ -1299,7 +1320,7 @@ model.fit(X\_train.reshape(-1,1), y\_train)
 You need to reshape the X values because you only use one feature in this case. If you use more then one feature you don't have to reshape your data.
 After training, you can use the \texttt{predict()} method on your model an pass the X\_test values to the model.
 
-\end{tips}
+\end{tipsp}
 
 \hypertarget{refine-your-simple-regression-model}{%
 \subsection{Refine Your Simple Regression Model}\label{refine-your-simple-regression-model}}
