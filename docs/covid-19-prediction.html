@@ -306,7 +306,7 @@ the corresponding actual values of <code>new_confirmed</code>.</p>
 <p>Furthermore, we want to visualize the true values for the train and test data
 set, as well as the predictions from our model data set for both time periods in one
 plot. This is how the plot should look like:</p>
-<p><img src="output_files/figure-html/unnamed-chunk-36-1.png" width="576" style="display: block; margin: auto;" /></p>
+<p><img src="output_files/figure-html/unnamed-chunk-36-1.png" width="1152" style="display: block; margin: auto;" /></p>
 <p>Your first simple linear regression model result might look something like this. Think about what the coefficient and the model fit metrics mean. How good do you think is this model based on the result?</p>
 <p><img src="plots/reg_table.png" width="50%" style="display: block; margin: auto;" /></p>
 <div class="tips r">
@@ -350,7 +350,7 @@ Always keep visualizing the results, as this is one of the easiest methods to sp
 <p>A side note, which you can consider in your model, but don’t need to: In this model setup, <span class="math inline">\(\beta_3\)</span> tells you, by how much the number of new confirmed cases deviates from the baseline country, on average in <em>absolute terms</em>. This might not make too much sense. Take the example US and Germany. It is likely that those countries do not have a time-stable difference in the absolute number of new confirmed cases. Rather it might be the case that Germany on average has a constant percentage less daily new infections over time than the US. You can incorporate that behaviour into your model by not using the “level” of <span class="math inline">\(new\_confirmed\)</span> but instead using the natural logarithm <span class="math inline">\(ln(new\_confirmed)\)</span> as the dependent variable. The interpretation for the coefficients now changes. Google how you can interpret the coefficient for the country dummy in this case (hint: “level-level, log-level regression”).</p>
 <p>If you choose to make those transformations, don’t forget to transform your predicted values back from the log values to level by exponentiating them.</p>
 <p>Again evaluate your model’s predictions visually and in terms of MAPE. How well does your model work on other countries than Germany? Try to find reasons for country-specific differences and conclude if you would use such a model to predict the number of new daily infections.</p>
-<p><img src="output_files/figure-html/unnamed-chunk-40-1.png" width="1056" /></p>
+<p><img src="output_files/figure-html/unnamed-chunk-40-1.png" width="1152" /></p>
 <p>Congratulations! You’ve made it to the end of your TechAcademy Data Science project.
 After visualizing the data in the first part, you’ve also set up predictive models in this section.
 If you stuck around until this part and managed to code the better part of the exercises, you’ve definitely earned your certificate!
