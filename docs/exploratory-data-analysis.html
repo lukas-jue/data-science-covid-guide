@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>4 Exploratory Data Analysis | Data Science Project Guide: Covid-19</title>
   <meta name="description" content="Everything you need to know for your successful TechAcademy Data Science Project" />
-  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
   <meta property="og:title" content="4 Exploratory Data Analysis | Data Science Project Guide: Covid-19" />
   <meta property="og:type" content="book" />
@@ -484,7 +484,7 @@ Additionally, call the methods <code>.location()</code>, <code>.radius()</code>,
 <h3><span class="header-section-number">4.4.2</span> Enhance Your Map</h3>
 <div class="tips r">
 <p>The next map will be the most advanced one – plot all European countries, color them according to the number of deaths and draw a label that states the number of deaths in that country. First, extract the <code>countrycode</code> of all countries within Europe. We provide you with a country lookup table that defines the region (e.g. Europe) for every individual country. Import this data set and extract the desired country codes into a vector. Use this structure:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="exploratory-data-analysis.html#cb12-1"></a>country_lookup &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;your/path/country_lookup.csv&quot;</span>)</span>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="exploratory-data-analysis.html#cb12-1"></a>country_lookup &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;your/path/country_lookup.csv&quot;</span>, <span class="dt">stringsAsFactors =</span> T)</span>
 <span id="cb12-2"><a href="exploratory-data-analysis.html#cb12-2"></a>country_lookup <span class="op">%&gt;%</span><span class="st"> </span></span>
 <span id="cb12-3"><a href="exploratory-data-analysis.html#cb12-3"></a><span class="st">  </span><span class="kw">filter</span>(region <span class="op">==</span><span class="st"> </span>“<span class="op">&lt;</span><span class="er">&lt;</span>specify region here<span class="op">&gt;</span><span class="er">&gt;</span>”) <span class="op">%&gt;%</span></span>
 <span id="cb12-4"><a href="exploratory-data-analysis.html#cb12-4"></a><span class="st">  </span><span class="co"># in case you want to exclude more countries, filter them here         </span></span>
